@@ -12,11 +12,12 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import Background from 'images/cloud.png';
 
 export default class Cloud extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div className="container-fluid cloud">
+      <div className="container-fluid cloud" style={{backgroundImage: "url(" + Background + ")", width:"100%", height:"100%", backgroundRepeat:"no-repeat", backgroundPositionX:"center"}}>
         <div className="row">
           <p className="leftAlign">Access to Personal Storage and File Sharing sites is restricted to mitigate risks associated with the loss of Ralph Lauren’s sensitive data. To securely share files with external users you can utilize Ralph Lauren’s Accellion Secure File Transfer platform. For access to Accellion please contact the RL Service Desk. </p>
           <p className="leftAlign"><button>Go Back</button></p>

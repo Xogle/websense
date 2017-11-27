@@ -12,11 +12,12 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import Background from 'images/stop.png';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div className="container-fluid stop">
+      <div className="container-fluid stop" style={{backgroundImage: "url(" + Background + ")", width:"100%", height:"100%", backgroundRepeat:"no-repeat", backgroundPositionX:"center"}}>
         <div className="row">
         <p>Ralph Lauren’s Acceptable Use policy<br/>restricts access to this website.</p>
         <p className="BackButton"><input type="button" value="Go Back"/></p>
