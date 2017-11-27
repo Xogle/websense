@@ -15,7 +15,32 @@
     <noscript>If you're seeing this message, that means <strong>JavaScript has been disabled on your browser</strong>, please <strong>enable JS</strong> to make this app work.</noscript>
 
     <!-- The app hooks into this div -->
-    <div id="app"></div>
+    <div id="page-container">
+          <div className="overlay"></div>
+              <header id="page-header">
+                <div id="page-logo">
+                  <img src="./images/logo_rl.jpg"/>
+                    <div id="app"></div>
+                </div>
+              </header>
+    </div>
     <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
   </body>
+  <script>
+  function getQueryParameters(url) {
+    let params = {};
+  let urlParams = (url || document.location.search)
+    .slice(1)
+    .split("&");
+  urlParams.forEach((param) => {
+    param = param.split('=');
+    params[param[0]] = param[1];
+  });
+  return params;
+}
+var params = getQueryParameters(this.url);
+$('#dest').html(params.dest);
+$('#reason').html(window.decodeURIComponent(params.reason));
+$('#BackButton').children('input').click(function(){window.history.go(-1); return false;});
+  </script>
 </html>
