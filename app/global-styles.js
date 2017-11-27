@@ -102,7 +102,7 @@ ul li:last-child, ol li:last-child {
 }
 
 .cloud {
-	background-image:url('../../../Security/PublishingImages/cloud.png');
+	background-image:url('./images/cloud.png');
 	width:100%;
 	height:100%;
 	background-repeat:no-repeat;
@@ -111,7 +111,7 @@ ul li:last-child, ol li:last-child {
 
 
 .stop {
-	background-image:url('../../../Security/PublishingImages/stop.png');
+	background-image:url('./images/stop.png');
 	width:100%;
 	height:100%;
 	background-repeat:no-repeat;
@@ -159,6 +159,10 @@ hr {
 }
 
 
+
+.leftAlign {
+  text-align:left;
+}
 
 /* +++++++++ ---------- PAGE HEADER ---------- +++++++++ */
 #page-logo img {

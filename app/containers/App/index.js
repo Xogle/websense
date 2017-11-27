@@ -16,6 +16,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import Cloud from 'containers/Cloud/Loadable';
+import SpeedBump from 'containers/SpeedBump/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/cloud" component={Cloud} />
+        <Route exact path="/speedbump" component={SpeedBump} />
 
         <Route component={NotFoundPage} />
       </Switch>
